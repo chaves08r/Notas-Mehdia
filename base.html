@@ -1,0 +1,31 @@
+<doctype html>
+    <html>
+        <head>
+            <cicle lógica de programação javascript></cicle>
+            <meta charset="uft-8">
+        </head>
+        <body>
+            <h1>lógica de programação javascript</h1>  
+            <span id="aluno0"></span>
+            <span id="aluno1"></span>          
+        <script lang="javascript">
+            var notas = [ [4.5, 6.5, 8.7,7,6,2],[8.8,7.8,9]];
+            
+
+            var acu = 0;
+
+            for(let i=0 ; i<notas.length ; i++){
+                acu=0;
+                for(let j=0; j<notas[i].length; j++){
+                    acu = acu + notas[i][j];        
+                }
+                let l = notas[i].length;
+                let media = acu/l;
+                console.log("Media aluno "+(i+1)+": " + media);
+                var spanAluno = document.querySelector("#aluno"+i);
+                spanAluno.innerHTML = "Media aluno "+(i+1)+": " + media;
+            }
+            
+        </script>
+    </body>
+</html>
